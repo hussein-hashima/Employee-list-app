@@ -1,0 +1,16 @@
+
+.row>*{
+    padding: 0;
+}
+h2{
+    margin-bottom: 15px;
+}
+table{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.no-matches-row {
+    text-align: center;
+    font-style: italic;
+  }
+  

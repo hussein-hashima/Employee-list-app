@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+       
+        
+            <app-filters-panel [filters]="filters" (applyFilters)="applyFilters()"
+                (clearFilters)="clearFilters()"class="mt-5"></app-filters-panel>
+        
+        
+            <table class="table p-2 mt-1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Employment Date</th>
+                        <th>Salary</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of filteredEmployees">
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.department }}</td>
+                        <td>{{ employee.employmentDate }}</td>
+                        <td>{{ employee.salary }}</td>
+                        <td>{{ employee.experience }}</td>
+                    </tr>
+                    <tr *ngIf="filteredEmployees.length === 0"  class="no-matches-row">
+                        <td colspan="5" class="text-bg-danger">No matching employees found.</td>
+                      </tr>
+                </tbody>
+            </table>
+        
+    </div>
+
+
+
+</div>
